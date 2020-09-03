@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="data"
+            type="com.example.kotlinforfilemanager.internal_storage.InternalStorageData" />
+
+        <variable
+            name="view"
+            type="com.example.kotlinforfilemanager.InternalStorageFragmentContract.View" />
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".internal_storage.InternalStorageFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/ttt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ttttt"/>
+            <TextView
+                android:id="@+id/rootname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={data.storageRootname}" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/recyclerView"/>
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+</layout>
